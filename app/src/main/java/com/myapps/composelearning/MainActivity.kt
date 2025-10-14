@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.myapps.composelearning.state.TodoStateScreenRoot
+import com.myapps.composelearning.side_effects.SampleSideEffect
 import com.myapps.composelearning.ui.theme.ComposeLearningTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,9 +21,26 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeLearningTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TodoStateScreenRoot(
-                        modifier = Modifier
-                            .padding(innerPadding)
+                    SampleSideEffect(
+                        list = listOf(
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test",
+                            "Test"
+                        ),
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
