@@ -4,14 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.myapps.composelearning.side_effects.SampleSideEffect
+import com.myapps.composelearning.locals.CustomLocal
 import com.myapps.composelearning.ui.theme.ComposeLearningTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,29 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeLearningTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SampleSideEffect(
-                        list = listOf(
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test",
-                            "Test"
-                        ),
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                CustomLocal()
             }
         }
     }
